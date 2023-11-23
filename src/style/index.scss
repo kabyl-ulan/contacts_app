@@ -20,8 +20,7 @@
 
 .contacts__add {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 16% 5px 16%;
+  flex-direction: column;
   background: #1292ef;
   padding: 15px 10px;
   border-radius: 6px;

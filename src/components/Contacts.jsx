@@ -58,7 +58,7 @@ function Contacts() {
       <Modal
         isOpen={isOpen}
         handleClick={handleClick}
-        children={<AddContact />}
+        children={<AddContact setContact={setContact} contact={contact} />}
       />
     </>
   );
