@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 //local
-import NewContact from "./NewContact";
 import { PUBLIC_API } from "../api";
-import Plus from "./Plus";
 import Modal from "./ui/Modal";
-import AddContact from "./AddContact";
+import Plus from "./Plus";
+import NewContact from "./NewContact";
+import RequestContact from "./RequestContact";
 
 function Contacts() {
   const [contact, setContact] = useState([]);
@@ -21,19 +21,6 @@ function Contacts() {
     return;
   };
 
-  const updateContact = async (id, user) => {
-    await PUBLIC_API.put(`contacts/users/${id}`, { ...user }).then(
-      ({ data }) => {
-        setContact((state) => state.map((el) => (el.id === id ? data : el)));
-      }
-    );
-  };
-
-  const deleteContacts = async (id) => {
-    setContact((state) => state.filter((el) => el.id !== id));
-    await PUBLIC_API.delete(`contacts/users/${id}`);
-  };
-
   useEffect(() => {
     getTodo();
   }, []);
@@ -42,14 +29,9 @@ function Contacts() {
     <>
       <section>
         <div className="container">
-          <ul className="contacts-ul">
+          <ul>
             {contact.map((el) => (
-              <NewContact
-                el={el}
-                key={el.id}
-                deleteContacts={deleteContacts}
-                updateContact={updateContact}
-              />
+              <NewContact el={el} key={el.id} setContact={setContact} />
             ))}
           </ul>
         </div>
@@ -58,7 +40,7 @@ function Contacts() {
       <Modal
         isOpen={isOpen}
         handleClick={handleClick}
-        children={<AddContact setContact={setContact} contact={contact} />}
+        children={<RequestContact setContact={setContact} setOpen={setOpen} />}
       />
     </>
   );

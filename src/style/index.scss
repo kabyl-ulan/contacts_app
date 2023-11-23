@@ -21,16 +21,14 @@
 .contacts__add {
   display: flex;
   flex-direction: column;
-  background: #1292ef;
   padding: 15px 10px;
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
-  padding: 0 15px;
-  margin: 5px;
-  background: #0fcc05;
+  padding: 10px 15px;
+  width: 100%;
+  background: #055bcc;
+  color: #ffffff;
   border-radius: 5px;
   transition: 0.3s;
   font-weight: bold;
@@ -40,7 +38,7 @@
 }
 
 .btn:hover {
-  background: #61ee59;
+  background: #0f77ff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -52,34 +50,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 4px;
   margin: 20px 0;
   padding: 15px;
   background: #4e9afd;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.contacts-ul {
-  margin: 0 16%;
-}
-
-.add_title {
-  text-align: center;
-  font-weight: bold;
-  font-family: "Yu Gothic", sans-serif;
-  color: #413e3e;
-  padding: 10px;
-  background-image: radial-gradient(
-    circle,
-    #f2fa47 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-.contacts-items {
-  display: flex;
-  justify-content: space-between;
 }
 
 .user {
@@ -108,8 +83,8 @@
 }
 
 .input-text {
-  padding: 5px;
-  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
   border-radius: 4px;
   transition: 0.2s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -189,39 +164,14 @@
   margin-top: 20px;
 }
 
-.modal-window {
-  background: #5e5c5c;
-  flex-direction: column;
-  transition: 0.3s;
-  margin: 0 15%;
-  padding: 10px 20px 10px 10px;
-  border-radius: 5px;
-}
-
-.modal-input {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.error {
-  padding: 10px;
-  color: red;
-}
-
-.sush-error {
-  display: flex;
-  justify-content: center;
-  margin: 0 16%;
-}
-
 /*************************************************/
 .plus {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #1de42e;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;

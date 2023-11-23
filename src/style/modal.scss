@@ -17,7 +17,7 @@
   align-items: center;
   z-index: 99;
   padding: 30px 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 
   &__item {
     max-width: 100%;
@@ -25,11 +25,18 @@
     transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
     transform: scale(1);
     position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background: #ddf75a;
+
+    @media (max-width: 580px) {
+      width: 90%;
+    }
 
     &__icon {
       position: absolute;
-      top: 5px;
-      right: -5px;
+      top: -15px;
+      right: -15px;
       width: 20px;
       height: 20px;
       display: flex;
