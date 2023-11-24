@@ -39,39 +39,34 @@ const NewContact = ({ el, setContact }) => {
       : "";
 
   return (
-    <li className="newcontacts">
+    <li>
       <div className="con-item">
-        <div
-          className="circle"
-          style={{
-            background: `white`,
-          }}
-        >
-          <span className="initial">{initial}</span>
+        <div className="circle">
+          <span>{initial}</span>
         </div>
         <div className="user">
-          <div className="user-name">{newName}</div>
-          <div className="user-surname">{newSurname}</div>
-          <a href={`tel:${phone}`} className="user-phone">
-            <span className="tel">тел: </span>
+          <div className="user--name">{newName}</div>
+          <div className="user--surname">{newSurname}</div>
+          <a href={`tel:${phone}`} className="user--phone">
+            <span>тел: </span>
             {phone}
           </a>
         </div>
       </div>
       <div className="buttons">
         <button
-          className="btn-update"
+          className="buttons__update"
           disabled={isLoading}
           onClick={handleClick}
         >
           Изменить
         </button>
         <button
-          className="btn-delete"
+          className="buttons__delete"
           disabled={isLoading}
           onClick={() => deleteContacts(id)}
         >
-          {!!isLoading ? "Удаление" : "Удалить"}
+          {!!isLoading ? "Удаление..." : "Удалить"}
         </button>
       </div>
       <Modal

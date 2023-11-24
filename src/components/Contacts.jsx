@@ -29,7 +29,7 @@ function Contacts() {
     <>
       <section>
         <div className="container">
-          <ul>
+          <ul className="contacts">
             {contact.map((el) => (
               <NewContact el={el} key={el.id} setContact={setContact} />
             ))}

@@ -2,21 +2,23 @@
 @import "Media.scss";
 @import "modal";
 
-.title {
-  width: 100%;
-  text-align: center;
-  background: #7c7c7c;
+.header {
+  background: #5f5f5f;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 0;
+
+  &__text {
+    text-align: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+  }
 }
 
-.theme {
-  font-weight: bold;
-  font-family: "Bodoni MT", sans-serif;
-  color: #f2fa47;
-  padding: 10px 0;
-}
+/*********************************************/
 
 .contacts__add {
   display: flex;
@@ -31,56 +33,126 @@
   color: #ffffff;
   border-radius: 5px;
   transition: 0.3s;
-  font-weight: bold;
-  font-family: "Bodoni MT", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background: #0f77ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    opacity: 80%;
+  }
 }
 
-.btn:hover {
-  background: #0f77ff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+/***************************************************/
+
+.contacts {
+  li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #4e9afd;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+    .con-item {
+      display: flex;
+      justify-content: space-between;
+
+      .user {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &--name,
+        &--surname,
+        &--phone {
+          margin-right: 15px;
+          color: #faf8f8;
+          font-weight: 600;
+          font-size: 17px;
+          font-family: "Poppins", sans-serif;
+
+          span {
+            font-weight: normal;
+            color: #000000;
+          }
+        }
+      }
+
+      .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        margin-right: 15px;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between !important;
+      align-items: center;
+      padding: 10px 0;
+
+      &__update,
+      &__delete {
+        padding: 8px 20px;
+        border-radius: 5px;
+        color: #faf8f8;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        &:active {
+          opacity: 80%;
+        }
+      }
+
+      &__update {
+        background: #0fcc05;
+        margin: 0 10px;
+
+        &:hover {
+          background: #17c40e;
+        }
+      }
+
+      &__delete {
+        background: #ff0000;
+
+        &:hover {
+          background: #cc0c0c;
+        }
+      }
+    }
+  }
 }
 
-.btn:active {
-  opacity: 80%;
-}
-
-.newcontacts {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 4px;
-  margin: 20px 0;
-  padding: 15px;
-  background: #4e9afd;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.user {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.user-name,
-.user-surname,
-.user-phone {
-  padding-right: 15px;
-  color: #faf8f8;
-  font-weight: bolder;
-  font-size: 17px;
-}
-
-.tel {
-  font-weight: normal;
-  color: #000000;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-}
+/**************************************************/
 
 .input-text {
   margin-bottom: 15px;
@@ -88,80 +160,11 @@
   border-radius: 4px;
   transition: 0.2s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  font-family: Arial, sans-serif;
-}
+  font-family: "Poppins", sans-serif;
 
-.input-text:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.btn-update {
-  padding: 10px;
-  background: #0fcc05;
-  border-radius: 5px;
-  transition: 0.3s;
-  font-weight: bold;
-  font-family: "Bodoni MT", sans-serif;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  margin: 0 10px;
-}
-
-.btn-update:hover {
-  background: #61ee59;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.btn-update:active {
-  opacity: 70%;
-}
-
-.btn-delete {
-  padding: 10px;
-  background: #ff0000;
-  border-radius: 5px;
-  transition: 0.3s;
-  font-weight: bold;
-  font-family: "Bodoni MT", sans-serif;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.btn-delete:hover {
-  background: #f3306a;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.btn-delete:active {
-  opacity: 70%;
-}
-
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  margin-right: 15px;
-}
-
-.initial {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.con-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn-item {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /*************************************************/
@@ -170,6 +173,8 @@
   bottom: 20px;
   right: 20px;
   background: #1de42e;
+  color: #ffffff;
+  font-weight: 900;
   width: 45px;
   height: 45px;
   border-radius: 50%;

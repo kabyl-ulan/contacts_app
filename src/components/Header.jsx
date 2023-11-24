@@ -4,8 +4,8 @@ function Header() {
   return (
     <header>
       <div className="container">
-        <div className="title">
-          <h1 className="theme">Контакты</h1>
+        <div className="header">
+          <h1 className="header__text">Контакты</h1>
         </div>
       </div>
     </header>
