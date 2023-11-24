@@ -6,9 +6,9 @@ This is a [React.js](https://react.dev/), [Sass](https://sass-lang.com/) and [Ja
 2. Run this command in the project directory to install dependencies:
 
 ```bash
-npm i
+npm install
 # or
-yarn
+yarn install
 ```
 
 3. You can run dev server with the following command:
